@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("./assets/glasmorphicsheet4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Poppins;
+}
+
+.card-wrapper {
+  width: 22.2rem !important;
+  padding: 0;
+  margin-left: 6.5rem;
+  margin-top: 2rem;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+}
+
+.profile-image {
+  height: 250px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: none;
+}
+.wide-row {
+  width: 100%;
+  padding: 0;
+}
+
+.read-more-button {
+  border-radius: 30px;
+  background: rgba(252, 88, 255, 0.6);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.text-wrapper {
+  font-weight: 400;
+}

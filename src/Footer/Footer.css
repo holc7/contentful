@@ -1,0 +1,18 @@
+.bg-body-tertiary-footer {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.5rem;
+  margin-top: 60px;
+  padding-right: 0 !important;
+}
+
+#container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
