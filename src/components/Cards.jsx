@@ -61,13 +61,6 @@ const Cards = () => {
                     {travel.fields.countrytitle}
                   </Card.Title>
                   <img
-                    onClick={() => {
-                      const audioUrl = travel.fields.sound?.fields.file.url;
-                      if (audioUrl) {
-                        const audio = new Audio(audioUrl);
-                        audio.play();
-                      }
-                    }}
                     className="sound-image"
                     src={travel.fields.lottieAnimation?.fields.file.url}
                     alt="sound"
