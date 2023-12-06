@@ -16,9 +16,9 @@ const Cards = () => {
   const [activeGifUrls, setActiveGifUrls] = useState({});
 
   useEffect(() => {
-    const SPACE_ID = "z09s5nbn4iqd";
-    const ENVIRONMENT = "master";
-    const ACCESS_TOKEN = "9TvzE_N_YhabHMBZGMkckN-fzWN6gWH87dDu5eFVPXQ";
+    const SPACE_ID = import.meta.env.VITE_SPACE_ID;
+    const ENVIRONMENT = import.meta.env.VITE_ENVIRONMENT;
+    const ACCESS_TOKEN = import.meta.env.VITE_ACCESS_TOKEN;
 
     const client = createClient({
       space: SPACE_ID,
