@@ -11,7 +11,7 @@ const Header = () => {
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container className="container">
             <img src={logo} alt="logo" width={80} />
-            <Navbar.Brand href="#home">Contentful Practice</Navbar.Brand>
+            <Navbar.Brand href="#home">Contentful</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse
               className="justify-content-center"
