@@ -33,7 +33,7 @@ const Cards = () => {
         setTravel(res.items);
         setTimeout(() => {
           setLoading(false);
-        }, 300010);
+        }, 2000);
       })
       .catch((err) => {
         console.log(err);
