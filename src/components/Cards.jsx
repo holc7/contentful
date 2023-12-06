@@ -7,6 +7,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import sound from "../assets/icons8-sound.gif";
 import "../App.css";
 import { motion, AnimatePresence } from "framer-motion";
+import loadingAnimation from "../assets/loadingAnimation.json";
+import Lottie from "lottie-react";
 
 const Cards = () => {
   const [travelingBlog, setTravel] = useState([]);
@@ -31,7 +33,7 @@ const Cards = () => {
         setTravel(res.items);
         setTimeout(() => {
           setLoading(false);
-        }, 500);
+        }, 3000);
       })
       .catch((err) => {
         console.log(err);
@@ -45,17 +47,27 @@ const Cards = () => {
       [cardId]: prev[cardId] === gifUrl ? null : gifUrl,
     }));
   };
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <>
       <AnimatePresence>
         {loading ? (
-          <div className="loader"></div>
+          <div className="lottie-loading">
+            <Lottie
+              animationData={loadingAnimation}
+              style={{ width: "300px" }}
+            />
+          </div>
         ) : (
           <motion.div
-            initial={{ opacity: 0, scale: 0.3 }}
-            exit={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeInOut" }}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={cardVariants}
+            transition={{ staggerChildren: 0.3 }}
           >
             <Row className="card-container d-flex wide-row">
               {travelingBlog.map((travel) => {
@@ -64,61 +76,63 @@ const Cards = () => {
                 const imageUrl = travel.fields.image?.fields.file.url;
 
                 return (
-                  <Card
-                    className="card-wrapper"
-                    style={{ width: "18rem" }}
+                  <motion.div
+                    className="col-xl-4 col-lg-5 col-custom"
                     key={travel.sys.id}
+                    variants={cardVariants}
                   >
-                    <Card.Img
-                      onClick={() => handleImageClick(cardId, gifUrl)}
-                      className="profile-image"
-                      variant="top"
-                      src={activeGifUrls[cardId] || imageUrl}
-                    />
-                    <Card.Body>
-                      <div className="d-flex align-items-center justify-content-between">
-                        <Card.Title style={{ fontWeight: "600" }}>
-                          {travel.fields.countrytitle}
-                        </Card.Title>
-                        <img
-                          className="sound-image"
-                          src={travel.fields.lottieAnimation?.fields.file.url}
-                          alt="sound"
-                          style={{
-                            width: "60px",
-                            padding: "0",
-                          }}
-                        />
-                        <img
-                          onClick={() => {
-                            const audioUrl =
-                              travel.fields.sound?.fields.file.url;
-                            if (audioUrl) {
-                              const audio = new Audio(audioUrl);
-                              audio.play();
-                            }
-                          }}
-                          className="sound-image"
-                          src={sound}
-                          alt="sound"
-                          style={{
-                            width: "60px",
-                            padding: "0",
-                          }}
-                        />
-                      </div>
-                      <Card.Text className="text-wrapper">
-                        {documentToReactComponents(travel.fields.body)}
-                      </Card.Text>
-                      <motion.button
-                        whileTap={{ scale: 0.9 }}
-                        className="read-more-button"
-                        variant="primary"
-                      >
-                        READ MORE
-                      </motion.button>
-                    </Card.Body>
-                  </Card>
+                    <Card className="card-wrapper" style={{ width: "10%" }}>
+                      <Card.Img
+                        onClick={() => handleImageClick(cardId, gifUrl)}
+                        className="profile-image"
+                        variant="top"
+                        src={activeGifUrls[cardId] || imageUrl}
+                      />
+                      <Card.Body>
+                        <div className="d-flex align-items-center justify-content-between">
+                          <Card.Title style={{ fontWeight: "600" }}>
+                            {travel.fields.countrytitle}
+                          </Card.Title>
+                          <img
+                            className="sound-image"
+                            src={travel.fields.lottieAnimation?.fields.file.url}
+                            alt="sound"
+                            style={{
+                              width: "60px",
+                              padding: "0",
+                            }}
+                          />
+                          <img
+                            onClick={() => {
+                              const audioUrl =
+                                travel.fields.sound?.fields.file.url;
+                              if (audioUrl) {
+                                const audio = new Audio(audioUrl);
+                                audio.play();
+                              }
+                            }}
+                            className="sound-image"
+                            src={sound}
+                            alt="sound"
+                            style={{
+                              width: "60px",
+                              padding: "0",
+                            }}
+                          />
+                        </div>
+                        <Card.Text className="text-wrapper">
+                          {documentToReactComponents(travel.fields.body)}
+                        </Card.Text>
+                        <motion.button
+                          whileTap={{ scale: 0.9 }}
+                          className="read-more-button"
+                          variant="primary"
+                        >
+                          READ MORE
+                        </motion.button>
+                      </Card.Body>
+                    </Card>
+                  </motion.div>
                 );
               })}
             </Row>
