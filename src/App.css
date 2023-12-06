@@ -57,20 +57,48 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 @media (min-width: 1700px) {
   .col-custom {
     flex: 0 0 auto;
     width: 24%;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+
+@media (min-width: 1440px) and (max-width: 1699px) {
   .card-wrapper {
-    margin-left: 2.2rem;
-    width: 20rem !important;
+    margin-left: 4rem;
+    width: 22.2rem;
   }
 }
 
-@media (min-width: 375px) and (max-width: 425px) {
+@media (min-width: 1200px) and (max-width: 1390px) {
+  .card-wrapper {
+    margin-left: 2.4rem;
+    width: 21rem !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1190px) {
+  .card-wrapper {
+    width: 22.2rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-wrapper {
+    margin-left: 1rem;
+    width: 22.2rem !important;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .card-wrapper {
+    margin-left: 2.2rem;
+    width: 22rem !important;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
   .card-wrapper {
     margin-left: 1.8rem;
     width: 20rem !important;
