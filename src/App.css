@@ -52,6 +52,11 @@ body {
   font-weight: 400;
 }
 
+.lottie-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (min-width: 1700px) {
   .col-custom {
     flex: 0 0 auto;
@@ -59,8 +64,9 @@ body {
   }
 }
 
-.lottie-loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 320px) and (max-width: 374px) {
+  .card-wrapper {
+    margin-left: 1rem;
+    width: 18rem !important;
+  }
 }
