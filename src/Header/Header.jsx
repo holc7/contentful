@@ -3,6 +3,7 @@ import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo1.png";
+import contact5 from "../assets/contact5.png";
 
 const Header = () => {
   return (
@@ -36,7 +37,12 @@ const Header = () => {
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-            <img className="contact-logo" src={logo} alt="logo" width={80} />
+            <img
+              className="contact-logo"
+              src={contact5}
+              alt="logo"
+              width={50}
+            />
           </Container>
         </Navbar>
       </header>
