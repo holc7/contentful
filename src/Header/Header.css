@@ -27,5 +27,10 @@ body {
 }
 
 .navbar-collapse {
-  margin-left: 20rem;
+  /*  margin-left: 20rem; */
+  text-align: center;
+}
+
+.navbar-nav {
+  /*   margin-left: 20rem; */
 }
