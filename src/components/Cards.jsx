@@ -77,7 +77,7 @@ const Cards = () => {
 
                 return (
                   <motion.div
-                    className="col-xl-4 col-lg-5 col-custom"
+                    className="col-xl-4 col-lg-5 col-md-6 col-custom"
                     key={travel.sys.id}
                     variants={cardVariants}
                   >
