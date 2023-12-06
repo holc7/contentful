@@ -64,6 +64,13 @@ body {
   }
 }
 
+@media (min-width: 375px) and (max-width: 425px) {
+  .card-wrapper {
+    margin-left: 1.8rem;
+    width: 20rem !important;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 374px) {
   .card-wrapper {
     margin-left: 1rem;
