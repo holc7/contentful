@@ -28,13 +28,14 @@ const Header = () => {
                   <NavDropdown.Item href="#action/3.3">
                     Villages
                   </NavDropdown.Item>
-                  <NavDropdown.Divider />
+                  {/*    <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
                     Villages
-                  </NavDropdown.Item>
+                  </NavDropdown.Item> */}
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
+            <img src={logo} alt="logo" width={80} />
           </Container>
         </Navbar>
       </header>
