@@ -57,6 +57,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 2560px) {
+  .col-custom {
+    margin-left: 0.8rem;
+    width: 15% !important;
+  }
+}
 
 @media (min-width: 1700px) {
   .col-custom {
