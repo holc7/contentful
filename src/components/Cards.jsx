@@ -33,7 +33,7 @@ const Cards = () => {
         setTravel(res.items);
         setTimeout(() => {
           setLoading(false);
-        }, 30000);
+        }, 300010);
       })
       .catch((err) => {
         console.log(err);
@@ -58,7 +58,7 @@ const Cards = () => {
           <div className="lottie-loading">
             <Lottie
               animationData={loadingAnimation}
-              style={{ width: "300px" }}
+              style={{ width: "620px" }}
             />
           </div>
         ) : (
