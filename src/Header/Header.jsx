@@ -20,6 +20,7 @@ const Header = () => {
               <Nav className="">
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#link">About</Nav.Link>
+
                 <NavDropdown title="Categories" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">
                     Countries
@@ -28,14 +29,14 @@ const Header = () => {
                   <NavDropdown.Item href="#action/3.3">
                     Villages
                   </NavDropdown.Item>
-                  {/*    <NavDropdown.Divider />
+                  <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
-                    Villages
-                  </NavDropdown.Item> */}
+                    Contact
+                  </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-            <img src={logo} alt="logo" width={80} />
+            <img className="contact-logo" src={logo} alt="logo" width={80} />
           </Container>
         </Navbar>
       </header>
