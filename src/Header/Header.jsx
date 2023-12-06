@@ -9,7 +9,7 @@ const Header = () => {
     <div>
       <header>
         <Navbar expand="lg" className="bg-body-tertiary">
-          <Container className="container">
+          <Container className="container ">
             <img src={logo} alt="logo" width={80} />
             <Navbar.Brand href="#home">Contentful</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -19,18 +19,18 @@ const Header = () => {
             >
               <Nav className="">
                 <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
+                <Nav.Link href="#link">About</Nav.Link>
+                <NavDropdown title="Categories" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">
+                    Countries
                   </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">Cities</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">
-                    Something
+                    Villages
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
-                    Separated link
+                    Villages
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
