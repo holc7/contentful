@@ -30,6 +30,12 @@ body {
   text-align: center;
 }
 
+@media (min-width: 2560px) {
+  .container {
+    margin-left: auto;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 1024px) {
   .contact-logo {
     display: none;

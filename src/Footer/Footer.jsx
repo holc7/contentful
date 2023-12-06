@@ -12,7 +12,7 @@ const Footer = () => {
           <div id="container-footer">
             <div className="footer-content">
               <img src={logo} alt="logo" width={80} />
-              <Navbar.Brand href="#home">
+              <Navbar.Brand id="footer-name" href="#home">
                 Group 1 Contentful Project
               </Navbar.Brand>
             </div>
