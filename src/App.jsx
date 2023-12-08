@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./Header/Header";
 import HamburgerMenu from "./components/HamburgerMenu";
 import Footer from "./Footer/Footer";
+import Contact from "./Contact/Contact";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
