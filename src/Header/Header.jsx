@@ -14,7 +14,9 @@ const Header = () => {
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container className="container ">
             <img src={logo} alt="logo" width={80} />
+            <LinkContainer to="/">
             <Navbar.Brand href="#home">Contentful</Navbar.Brand>
+            </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse
               className="justify-content-center"
@@ -32,17 +34,21 @@ const Header = () => {
                 </LinkContainer>
 
                 <NavDropdown title="Categories" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">
+                <LinkContainer to="/countries">
+                  <NavDropdown.Item>
                     Countries
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Cities</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                </LinkContainer>
+                <LinkContainer to="/cities">
+                  <NavDropdown.Item>Cities</NavDropdown.Item>
+                  </LinkContainer>
+                  {/* <NavDropdown.Item href="#action/3.3">
                     Villages
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
+                  </NavDropdown.Item> */}
+                  {/* <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
                     Contact
-                  </NavDropdown.Item>
+                  </NavDropdown.Item> */}
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
