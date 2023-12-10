@@ -38,7 +38,7 @@ let styles = {
     borderBottomRightRadius: "30px",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     backdropFilter: "blur(10px)",
-    padding: "2.5em 1.5em 0",
+    padding: "3.6em 2em 0",
     fontSize: "1.15em",
   },
   bmMorphShape: {
