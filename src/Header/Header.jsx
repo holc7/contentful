@@ -28,9 +28,6 @@ const Header = () => {
                 <Nav.Link as={Link} to="about">
                   About
                 </Nav.Link>
-                <Nav.Link as={Link} to="contact">
-                  Contact
-                </Nav.Link>
 
                 <NavDropdown title="Categories" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">
@@ -41,18 +38,17 @@ const Header = () => {
                     Villages
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Contact
-                  </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-            <img
-              className="contact-logo"
-              src={contact5}
-              alt="logo"
-              width={50}
-            />
+            <Link as={Link} to="contact">
+              <img
+                className="contact-logo"
+                src={contact5}
+                alt="logo"
+                width={50}
+              />
+            </Link>
           </Container>
         </Navbar>
       </header>
