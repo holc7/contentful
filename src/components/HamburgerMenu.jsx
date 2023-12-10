@@ -1,6 +1,8 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import "./HamburgerMenu.css";
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 let styles = {
   bmBurgerButton: {
     position: "fixed",
@@ -67,21 +69,24 @@ const HamburgerMenu = (props) => {
       styles={styles}
       onStateChange={({ isOpen }) => props.onStateChange({ isOpen })}
     >
-      <a className="menu-item" href="/">
+      <Nav.Link as={Link} to="/">
         Home
-      </a>
+      </Nav.Link>
 
-      <a className="menu-item" href="/about">
+      <Nav.Link as={Link} to="/">
         About
-      </a>
+      </Nav.Link>
 
-      <a className="menu-item" href="/services">
-        Services
-      </a>
-
-      <a className="menu-item" href="/contact">
+      <Nav.Link as={Link} to="contact">
         Contact
-      </a>
+      </Nav.Link>
+
+      <Nav.Link as={Link} to="/">
+        Countries
+      </Nav.Link>
+      <Nav.Link as={Link} to="/">
+        Cities
+      </Nav.Link>
     </Menu>
   );
 };
