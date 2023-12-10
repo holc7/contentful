@@ -15,7 +15,7 @@ function App() {
       <HamburgerMenu
         onStateChange={({ isOpen }) => setIsMenuOpen(isOpen)}
       />{" "}
-      <Main isMenuOpen={isMenuOpen} />
+      <Main isMenuOpen={isMenuOpen} className="main-content" />
       <Footer />
     </>
   );
