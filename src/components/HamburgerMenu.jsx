@@ -27,6 +27,7 @@ let styles = {
   bmMenuWrap: {
     position: "fixed",
     height: "100%",
+    zIndex: 1,
   },
   bmMenu: {
     borderTopLeftRadius: "20px",
@@ -51,15 +52,18 @@ let styles = {
     textDecoration: "none",
   },
   bmItem: {
+    marginTop: "30px",
     display: "inline-block",
     outline: "none",
     color: "black",
     textDecoration: "none",
+    marginLeft: "70px",
   },
   bmOverlay: {
     borderTopLeftRadius: "20px",
     borderTopRightRadius: "20px",
     background: "none",
+    zIndex: 3,
   },
 };
 
