@@ -11,9 +11,9 @@ function App() {
   return (
     <>
       <Header />
-      <HamburgerMenu
+      {/* <HamburgerMenu
         onStateChange={({ isOpen }) => setIsMenuOpen(isOpen)}
-      />{" "}
+      />{" "} */}
       <Main isMenuOpen={isMenuOpen} />
       <Footer />
     </>
