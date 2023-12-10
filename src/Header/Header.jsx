@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo1.png";
 import contact5 from "../assets/contact5.png";
+import { NavLink } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => {
   return (
@@ -19,8 +21,15 @@ const Header = () => {
               id="basic-navbar-nav"
             >
               <Nav className="">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">About</Nav.Link>
+                <LinkContainer to="/">
+                  <Nav.Link>Home</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/about">
+                  <Nav.Link>About</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/contact">
+                  <Nav.Link>Contact</Nav.Link>
+                </LinkContainer>
 
                 <NavDropdown title="Categories" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">
