@@ -53,9 +53,6 @@ const Cards = () => {
   };
   return (
     <>
-      <section>
-        <h1 className="cities-wrapper">COUNTRIES</h1>
-      </section>
       <AnimatePresence>
         {loading ? (
           <div className="lottie-loading">
