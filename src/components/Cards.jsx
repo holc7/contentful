@@ -129,7 +129,7 @@ const Cards = () => {
                         <Card.Text className="text-wrapper">
                           {documentToReactComponents(travel.fields.body)}
                         </Card.Text>
-                        <LinkContainer to={`/countries/${travel.fields.countrytitle}`}>
+                        <LinkContainer to={`/countries/${travel.sys.id}`}>
                         <motion.button
                           whileTap={{ scale: 0.9 }}
                           className="read-more-button"

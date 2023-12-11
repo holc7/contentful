@@ -22,7 +22,7 @@ const Main = ({ isMenuOpen, className }) => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/countries" element={<CountriesOverview setEntryIdSelectedCountry={setEntryIdSelectedCountry} />} />
-        <Route path="/countries/:travelfieldscountrytitle" element={<CountryDetails entryIdSelectedCountry={entryIdSelectedCountry}/>} />
+        <Route path="/countries/:entryid" element={<CountryDetails entryIdSelectedCountry={entryIdSelectedCountry}/>} />
         <Route path="/cities" element={<CitiesOverview />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
