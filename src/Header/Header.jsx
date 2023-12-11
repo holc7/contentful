@@ -1,11 +1,12 @@
 import React from "react";
 import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
 import logo from "../assets/logo1.png";
 import contact5 from "../assets/contact5.png";
-import { NavLink } from "react-router-dom";
-import { LinkContainer } from "react-router-bootstrap";
+import { NavLink, Link } from "react-router-dom";
+import { LinkContainer} from "react-router-bootstrap";
+
 
 const Header = () => {
   return (
