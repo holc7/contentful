@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo1.png";
 import contact5 from "../assets/contact5.png";
+import { NavLink } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => {
   return (
@@ -12,28 +14,41 @@ const Header = () => {
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container className="container ">
             <img src={logo} alt="logo" width={80} />
+            <LinkContainer to="/">
             <Navbar.Brand href="#home">Contentful</Navbar.Brand>
+            </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse
               className="justify-content-center"
               id="basic-navbar-nav"
             >
               <Nav className="">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">About</Nav.Link>
+                <LinkContainer to="/">
+                  <Nav.Link>Home</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/about">
+                  <Nav.Link>About</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/contact">
+                  <Nav.Link>Contact</Nav.Link>
+                </LinkContainer>
 
                 <NavDropdown title="Categories" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">
+                <LinkContainer to="/countries">
+                  <NavDropdown.Item>
                     Countries
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Cities</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                </LinkContainer>
+                <LinkContainer to="/cities">
+                  <NavDropdown.Item>Cities</NavDropdown.Item>
+                  </LinkContainer>
+                  {/* <NavDropdown.Item href="#action/3.3">
                     Villages
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
+                  </NavDropdown.Item> */}
+                  {/* <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.4">
                     Contact
-                  </NavDropdown.Item>
+                  </NavDropdown.Item> */}
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>

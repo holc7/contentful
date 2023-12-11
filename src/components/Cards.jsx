@@ -9,6 +9,7 @@ import "../App.css";
 import { motion, AnimatePresence } from "framer-motion";
 import loadingAnimation from "../assets/loadingAnimation.json";
 import Lottie from "lottie-react";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Cards = () => {
   const [travelingBlog, setTravel] = useState([]);
@@ -123,6 +124,7 @@ const Cards = () => {
                         <Card.Text className="text-wrapper">
                           {documentToReactComponents(travel.fields.body)}
                         </Card.Text>
+                        <LinkContainer to={`/countries/${travel.fields.countrytitle}`}>
                         <motion.button
                           whileTap={{ scale: 0.9 }}
                           className="read-more-button"
@@ -130,6 +132,7 @@ const Cards = () => {
                         >
                           READ MORE
                         </motion.button>
+                        </LinkContainer>
                       </Card.Body>
                     </Card>
                   </motion.div>
