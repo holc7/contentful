@@ -9,7 +9,7 @@ const Home = ({ entryIdSelectedCountry, setEntryIdSelectedCountry }) => {
   return (
     <div /* className={isMenuOpen ? "menu-open" : ""} */>
       <section>
-        <div className="d-flex align-items-center justify-content-between">
+        <div className="d-flex flex-column flex-md-row align-items-center justify-content-between">
           <h1 className="cities-wrapper">COUNTRIES</h1>
           <Dropdown className="mt-4">
             <Dropdown.Toggle className="drop-down-button" id="dropdown-basic">

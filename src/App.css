@@ -63,7 +63,6 @@ body {
 }
 
 .drop-down-button {
-  margin-right: 5rem;
   font-size: 0.9rem !important;
   padding: 10px;
   border-radius: 30px;
@@ -81,6 +80,7 @@ body {
 }
 
 .dropdown-item:hover {
+  color: black;
   background-color: transparent;
 }
 .dropdown-item:focus {
@@ -116,12 +116,40 @@ body {
     flex: 0 0 auto;
     width: 24%;
   }
+  .drop-down-button {
+    margin-right: 5rem;
+    font-size: 0.9rem !important;
+    padding: 10px;
+    border-radius: 30px;
+    background: rgba(252, 88, 255, 0.6);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
+  }
 }
 
 @media (min-width: 1440px) and (max-width: 1699px) {
   .card-wrapper {
     margin-left: 4rem;
     width: 22.2rem;
+  }
+  .drop-down-button {
+    margin-right: 5rem;
+    font-size: 0.9rem !important;
+    padding: 10px;
+    border-radius: 30px;
+    background: rgba(252, 88, 255, 0.6);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
   }
 }
 
@@ -130,11 +158,39 @@ body {
     margin-left: 2.4rem;
     width: 21rem !important;
   }
+  .drop-down-button {
+    margin-right: 5rem;
+    font-size: 0.9rem !important;
+    padding: 10px;
+    border-radius: 30px;
+    background: rgba(252, 88, 255, 0.6);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1190px) {
   .card-wrapper {
     width: 22.2rem !important;
+  }
+  .drop-down-button {
+    margin-right: 5rem !important;
+    font-size: 0.9rem !important;
+    padding: 10px;
+    border-radius: 30px;
+    background: rgba(252, 88, 255, 0.6);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -174,5 +230,19 @@ body {
   .cities-wrapper {
     text-align: center;
     padding-left: 0;
+  }
+  .drop-down-button {
+    margin-right: 0;
+    font-size: 0.9rem !important;
+    padding: 10px;
+    border-radius: 30px;
+    background: rgba(252, 88, 255, 0.6);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
   }
 }
