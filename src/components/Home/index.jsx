@@ -11,12 +11,12 @@ const Home = ({ entryIdSelectedCountry, setEntryIdSelectedCountry }) => {
       <section>
         <div className="d-flex align-items-center justify-content-between">
           <h1 className="cities-wrapper">COUNTRIES</h1>
-          <Dropdown className="mt-4 drop-down-button">
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
+          <Dropdown className="mt-4">
+            <Dropdown.Toggle className="drop-down-button" id="dropdown-basic">
               Filter by continent
             </Dropdown.Toggle>
 
-            <Dropdown.Menu>
+            <Dropdown.Menu className="drop-down-button">
               <Dropdown.Item onClick={() => setSelectedContinent("europeCont")}>
                 Europe
               </Dropdown.Item>
