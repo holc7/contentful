@@ -1,12 +1,11 @@
 import React from "react";
 import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/logo1.png";
 import contact5 from "../assets/contact5.png";
 import { NavLink, Link } from "react-router-dom";
-import { LinkContainer} from "react-router-bootstrap";
-
+import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => {
   return (
@@ -16,7 +15,7 @@ const Header = () => {
           <Container className="container ">
             <img src={logo} alt="logo" width={80} />
             <LinkContainer to="/">
-            <Navbar.Brand href="#home">Contentful</Navbar.Brand>
+              <Navbar.Brand href="#home">Contentful</Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse
@@ -35,13 +34,13 @@ const Header = () => {
                 </LinkContainer>
 
                 <NavDropdown title="Categories" id="basic-nav-dropdown">
-                <LinkContainer to="/countries">
-                  <NavDropdown.Item>
-                    Countries
-                  </NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/cities">
-                  <NavDropdown.Item>Cities</NavDropdown.Item>
+                  <LinkContainer to="/">
+                    <NavDropdown.Item className="nav-drop-down">
+                      Countries
+                    </NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/cities">
+                    <NavDropdown.Item>Cities</NavDropdown.Item>
                   </LinkContainer>
                   {/* <NavDropdown.Item href="#action/3.3">
                     Villages

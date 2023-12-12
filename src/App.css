@@ -64,6 +64,41 @@ body {
 
 .drop-down-button {
   margin-right: 5rem;
+  font-size: 0.9rem !important;
+  padding: 10px;
+  border-radius: 30px;
+  background: rgba(252, 88, 255, 0.6);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+.drop-down-button:hover {
+  background-color: rgba(252, 88, 255, 0.6);
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+}
+.dropdown-item:focus {
+  background-color: transparent !important;
+}
+
+.dropdown-menu {
+  background: rgba(252, 88, 255, 1);
+
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.dropdown-menu:focus {
+  background-color: transparent !important;
 }
 
 @media (min-width: 2560px) {
