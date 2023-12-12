@@ -60,14 +60,16 @@ const CountryDetails = () => {
             </Row>
             <Row>
               <Col>
-              <h1 className="countrydetails-headline-h1">
-              {countryData.fields.countrytitle}
-            </h1>
+                <h1 className="countrydetails-headline-h1">
+                  {countryData.fields.countrytitle}
+                </h1>
               </Col>
             </Row>
-            {documentToReactComponents(countryData.fields.body)}
-            <Row>
+            {/* {documentToReactComponents(countryData.fields.body)} */}
+
+            <Row className="row-p-img">
               <Col>
+                <h2>{countryData.fields.paragraphTitle}</h2>
                 <p>{countryData.fields.firstParagraph}</p>
               </Col>
               <Col>
@@ -77,7 +79,8 @@ const CountryDetails = () => {
                 />
               </Col>
             </Row>
-            <Row>
+
+            <Row className="row-p-img">
               <Col>
                 <Image
                   src={countryData.fields.morePictures[1].fields.file.url}
@@ -85,11 +88,13 @@ const CountryDetails = () => {
                 />
               </Col>
               <Col>
+                <h2>{countryData.fields.paragraphTitle}</h2>
                 <p>{countryData.fields.secondParagraph}</p>
               </Col>
             </Row>
-            <Row>
+            <Row className="row-p-img">
               <Col>
+                <h2>{countryData.fields.paragraphTitle}</h2>
                 <p>{countryData.fields.thirdParagraph}</p>
               </Col>
               <Col>
@@ -99,7 +104,7 @@ const CountryDetails = () => {
                 />
               </Col>
             </Row>
-            <Row>
+            <Row className="row-p-img">
               <Col>
                 <Image
                   src={countryData.fields.morePictures[3].fields.file.url}
@@ -107,6 +112,7 @@ const CountryDetails = () => {
                 />
               </Col>
               <Col>
+                <h2>{countryData.fields.paragraphTitle}</h2>
                 <p>{countryData.fields.fourthParagraph}</p>
               </Col>
             </Row>
@@ -116,11 +122,12 @@ const CountryDetails = () => {
 
       <motion.button
         whileTap={{ scale: 0.9 }}
-        className="read-more-button"
+        className="read-more-button countrydetails-read-more-button"
         variant="primary"
         onClick={() => navigate(-1)}
       >
-        Back to country overview
+        <span className="material-symbols-outlined">arrow_back</span>
+        <span className="countrydetails-button-back">Back to country overview</span>
       </motion.button>
     </>
   );
