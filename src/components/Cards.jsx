@@ -11,7 +11,7 @@ import loadingAnimation from "../assets/loadingAnimation.json";
 import Lottie from "lottie-react";
 import { LinkContainer } from "react-router-bootstrap";
 
-const Cards = () => {
+const Cards = ({ selectedContinent }) => {
   const [travelingBlog, setTravel] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeGifUrls, setActiveGifUrls] = useState({});
@@ -31,17 +31,28 @@ const Cards = () => {
     client
       .getEntries([])
       .then((res) => {
-        setTravel(res.items);
+        console.log(res.items);
+        let filteredItems;
+        if (selectedContinent === "All") {
+          filteredItems = res.items;
+        } else {
+          filteredItems = res.items.filter((item) => {
+            return item.metadata.tags.some(
+              (tag) => tag.sys.id === selectedContinent
+            );
+          });
+        }
+        console.log(filteredItems);
+        setTravel(filteredItems);
         setTimeout(() => {
           setLoading(false);
         }, 2000);
-        console.log(res);
       })
       .catch((err) => {
         console.log(err);
         setLoading(false);
       });
-  }, []);
+  }, [selectedContinent]);
 
   const handleImageClick = (cardId, gifUrl) => {
     setActiveGifUrls((prev) => ({

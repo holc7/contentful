@@ -1,8 +1,11 @@
 import React from "react";
+import { useState } from "react";
+
 import Cards from "../Cards";
 import Dropdown from "react-bootstrap/Dropdown";
 
 const Home = ({ entryIdSelectedCountry, setEntryIdSelectedCountry }) => {
+  const [selectedContinent, setSelectedContinent] = useState("All");
   return (
     <div /* className={isMenuOpen ? "menu-open" : ""} */>
       <section>
@@ -14,14 +17,30 @@ const Home = ({ entryIdSelectedCountry, setEntryIdSelectedCountry }) => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Europe</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">South America</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Africa</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Asia</Dropdown.Item>
+              <Dropdown.Item onClick={() => setSelectedContinent("europeCont")}>
+                Europe
+              </Dropdown.Item>
+              <Dropdown.Item
+                onClick={() => setSelectedContinent("southAmericaCont")}
+              >
+                South America
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => setSelectedContinent("africaCont")}>
+                Africa
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => setSelectedContinent("asiaCont")}>
+                Asia
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => setSelectedContinent("All")}>
+                Reset
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
-        <Cards setEntryIdSelectedCountry={setEntryIdSelectedCountry} />
+        <Cards
+          setEntryIdSelectedCountry={setEntryIdSelectedCountry}
+          selectedContinent={selectedContinent}
+        />
       </section>
     </div>
   );
