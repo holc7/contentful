@@ -7,7 +7,7 @@ const CountryDetails = () => {
   const { entryid } = useParams();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-  const [countryData, setCountryData] = useState([]);
+  const [countryData, setCountryData] = useState(null);
 
 
   useEffect(() => {
@@ -26,30 +26,27 @@ const CountryDetails = () => {
       .getEntry(entryid)
       .then((res) => {
         setCountryData(res);
-        setTimeout(() => {
-          setLoading(false);
-        }, 2000);
+        setLoading(false);
         console.log(res)
-        console.log(entryid)
       })
       .catch((err) => {
         console.log(err);
         setLoading(false);
       });
-  }, []);
+  }, [entryid]);
 
-  // const gifUrl = res.fields.imageVideo?.fields.file.url;
-  // const imageUrl = res.fields.image?.fields.file.url;
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
-      <h1>CountryDetails</h1> 
+      <h1>CountryDetails</h1>
 
-      <h1>{countryData.fields.countrytitle}</h1>
-
-      {/* <img src={activeGifUrls[cardId] || imageUrl} alt="" /> */}
- 
-
+      {countryData && countryData.fields && (
+        <h2>{countryData.fields.countrytitle}</h2>
+      )}
+      
       <motion.button
         whileTap={{ scale: 0.9 }}
         className="read-more-button"
