@@ -22,3 +22,8 @@
 .countrydetails-body-quote {
     text-align: center;
 }
+
+.countrydetails-map {
+    height: 200px;
+    width: 200px;
+}
