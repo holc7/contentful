@@ -152,7 +152,7 @@ body {
     width: 22.2rem;
   }
   .drop-down-button {
-    margin-right: 5rem;
+    margin-right: 4.3rem;
     font-size: 0.9rem !important;
     padding: 10px;
     border-radius: 30px;
@@ -167,7 +167,7 @@ body {
   }
 
   .cities-wrapper {
-    margin-left: 4rem;
+    margin-left: 4.2rem;
     padding-left: 0;
   }
 }
