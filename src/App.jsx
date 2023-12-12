@@ -6,12 +6,14 @@ import Header from "./Header/Header";
 import HamburgerMenu from "./components/HamburgerMenu";
 import Footer from "./Footer/Footer";
 import Contact from "./Contact/Contact";
+import FilterButton from "./components/FilterButton";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div style={{ position: "relative" }}>
       <Header />
+
       {/*  <HamburgerMenu
         onStateChange={({ isOpen }) => setIsMenuOpen(isOpen)}
       />{" "} */}

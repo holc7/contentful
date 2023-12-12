@@ -59,9 +59,12 @@ body {
 }
 
 .sound-image:hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
+.drop-down-button {
+  margin-right: 5rem;
+}
 
 @media (min-width: 2560px) {
   .col-custom {

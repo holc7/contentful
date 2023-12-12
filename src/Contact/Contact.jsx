@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="">
       <form className="d-flex flex-column justify-content-center align-items-center form-wrapper">
         <h2>CONTACT US</h2>
 
