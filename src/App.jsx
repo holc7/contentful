@@ -12,7 +12,7 @@ function App() {
   return (
     <div style={{ position: "relative" }}>
       <Header />
-      {/* <HamburgerMenu
+      {/*  <HamburgerMenu
         onStateChange={({ isOpen }) => setIsMenuOpen(isOpen)}
       />{" "} */}
       <Main isMenuOpen={isMenuOpen} />
