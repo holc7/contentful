@@ -35,6 +35,7 @@ const Cards = () => {
         setTimeout(() => {
           setLoading(false);
         }, 2000);
+        console.log(res)
       })
       .catch((err) => {
         console.log(err);
