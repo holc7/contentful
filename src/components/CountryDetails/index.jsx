@@ -8,6 +8,10 @@ import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { MapContainer } from "react-leaflet/MapContainer";
+import { TileLayer } from "react-leaflet/TileLayer";
+import { Marker } from "react-leaflet/Marker";
+import { Popup } from "react-leaflet/Popup";
 
 const CountryDetails = () => {
   const { entryid } = useParams();
@@ -77,7 +81,7 @@ const CountryDetails = () => {
                 />
               </Col>
             </Row>
-            
+
             <Row className="row-p-img">
               <Col>
                 <Image
@@ -91,13 +95,11 @@ const CountryDetails = () => {
               </Col>
             </Row>
 
-
-
             <Row className="row-p-img">
               <Col>
-              <div className="countrydetails-body-quote">
-              <h3>{documentToReactComponents(countryData.fields.body)}</h3>
-              </div>
+                <div className="countrydetails-body-quote">
+                  <h3>{documentToReactComponents(countryData.fields.body)}</h3>
+                </div>
               </Col>
             </Row>
 
@@ -125,6 +127,24 @@ const CountryDetails = () => {
                 <p>{countryData.fields.fourthParagraph}</p>
               </Col>
             </Row>
+             
+            
+            <Row className="row-p-img">
+              <Col>
+                <MapContainer
+                  center={[countryData.fields.location.lat, countryData.fields.location.lon]}
+                  zoom={5}
+                  scrollWheelZoom={false}
+                  className="countrydetails-map"
+                  style={{ height: "400px", width: "100%" }}
+                >
+                  <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  />
+                </MapContainer>
+              </Col>
+            </Row>
           </div>
         </Container>
       )}
@@ -136,7 +156,9 @@ const CountryDetails = () => {
         onClick={() => navigate(-1)}
       >
         <span className="material-symbols-outlined">arrow_back</span>
-        <span className="countrydetails-button-back">Back to country overview</span>
+        <span className="countrydetails-button-back">
+          Back to country overview
+        </span>
       </motion.button>
     </>
   );
