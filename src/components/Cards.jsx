@@ -48,6 +48,11 @@ const Cards = () => {
       [cardId]: prev[cardId] === gifUrl ? null : gifUrl,
     }));
   };
+
+  const handleSelectedCountry = (key) => {
+    setEntryIdSelectedCountry(key)
+  }
+
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -124,11 +129,12 @@ const Cards = () => {
                         <Card.Text className="text-wrapper">
                           {documentToReactComponents(travel.fields.body)}
                         </Card.Text>
-                        <LinkContainer to={`/countries/${travel.fields.countrytitle}`}>
+                        <LinkContainer to={`/countries/${travel.sys.id}`}>
                         <motion.button
                           whileTap={{ scale: 0.9 }}
                           className="read-more-button"
                           variant="primary"
+                          //  onClick={() => handleSelectedCountry(key)}
                         >
                           READ MORE
                         </motion.button>

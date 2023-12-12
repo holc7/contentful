@@ -1,6 +1,8 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import "./HamburgerMenu.css";
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 let styles = {
   bmBurgerButton: {
     position: "fixed",
@@ -25,6 +27,7 @@ let styles = {
   bmMenuWrap: {
     position: "fixed",
     height: "100%",
+    zIndex: 1,
   },
   bmMenu: {
     borderTopLeftRadius: "20px",
@@ -35,7 +38,7 @@ let styles = {
     borderBottomRightRadius: "30px",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     backdropFilter: "blur(10px)",
-    padding: "2.5em 1.5em 0",
+    padding: "3.6em 2em 0",
     fontSize: "1.15em",
   },
   bmMorphShape: {
@@ -49,15 +52,18 @@ let styles = {
     textDecoration: "none",
   },
   bmItem: {
+    marginTop: "30px",
     display: "inline-block",
     outline: "none",
     color: "black",
     textDecoration: "none",
+    marginLeft: "70px",
   },
   bmOverlay: {
     borderTopLeftRadius: "20px",
     borderTopRightRadius: "20px",
     background: "none",
+    zIndex: 3,
   },
 };
 
@@ -67,21 +73,24 @@ const HamburgerMenu = (props) => {
       styles={styles}
       onStateChange={({ isOpen }) => props.onStateChange({ isOpen })}
     >
-      <a className="menu-item" href="/">
+      <Nav.Link as={Link} to="/">
         Home
-      </a>
+      </Nav.Link>
 
-      <a className="menu-item" href="/about">
+      <Nav.Link as={Link} to="/">
         About
-      </a>
+      </Nav.Link>
 
-      <a className="menu-item" href="/services">
-        Services
-      </a>
-
-      <a className="menu-item" href="/contact">
+      <Nav.Link as={Link} to="contact">
         Contact
-      </a>
+      </Nav.Link>
+
+      <Nav.Link as={Link} to="/">
+        Countries
+      </Nav.Link>
+      <Nav.Link as={Link} to="/">
+        Cities
+      </Nav.Link>
     </Menu>
   );
 };
