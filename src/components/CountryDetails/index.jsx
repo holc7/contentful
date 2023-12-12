@@ -65,8 +65,6 @@ const CountryDetails = () => {
                 </h1>
               </Col>
             </Row>
-            {/* {documentToReactComponents(countryData.fields.body)} */}
-
             <Row className="row-p-img">
               <Col>
                 <h2>{countryData.fields.paragraphTitle}</h2>
@@ -79,7 +77,7 @@ const CountryDetails = () => {
                 />
               </Col>
             </Row>
-
+            
             <Row className="row-p-img">
               <Col>
                 <Image
@@ -92,6 +90,17 @@ const CountryDetails = () => {
                 <p>{countryData.fields.secondParagraph}</p>
               </Col>
             </Row>
+
+
+
+            <Row className="row-p-img">
+              <Col>
+              <div className="countrydetails-body-quote">
+              <h3>{documentToReactComponents(countryData.fields.body)}</h3>
+              </div>
+              </Col>
+            </Row>
+
             <Row className="row-p-img">
               <Col>
                 <h2>{countryData.fields.paragraphTitle}</h2>
