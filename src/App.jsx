@@ -10,14 +10,14 @@ import Contact from "./Contact/Contact";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <Header />
       {/* <HamburgerMenu
         onStateChange={({ isOpen }) => setIsMenuOpen(isOpen)}
       />{" "} */}
       <Main isMenuOpen={isMenuOpen} />
       <Footer />
-    </>
+    </div>
   );
 }
 

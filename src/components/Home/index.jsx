@@ -1,12 +1,12 @@
 import React from "react";
 import Cards from "../Cards";
 
-const Home = () => {
+const Home = ({entryIdSelectedCountry, setEntryIdSelectedCountry}) => {
   return (
     <div /* className={isMenuOpen ? "menu-open" : ""} */>
       <section>
         <h1 className="cities-wrapper">COUNTRIES</h1>
-        <Cards />
+        <Cards setEntryIdSelectedCountry={setEntryIdSelectedCountry}/>
       </section>
     </div>
   );
