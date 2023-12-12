@@ -35,7 +35,7 @@ const Cards = () => {
         setTimeout(() => {
           setLoading(false);
         }, 2000);
-        console.log(res)
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -51,8 +51,8 @@ const Cards = () => {
   };
 
   const handleSelectedCountry = (key) => {
-    setEntryIdSelectedCountry(key)
-  }
+    setEntryIdSelectedCountry(key);
+  };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -131,14 +131,14 @@ const Cards = () => {
                           {documentToReactComponents(travel.fields.body)}
                         </Card.Text>
                         <LinkContainer to={`/countries/${travel.sys.id}`}>
-                        <motion.button
-                          whileTap={{ scale: 0.9 }}
-                          className="read-more-button"
-                          variant="primary"
-                          //  onClick={() => handleSelectedCountry(key)}
-                        >
-                          READ MORE
-                        </motion.button>
+                          <motion.button
+                            whileTap={{ scale: 0.9 }}
+                            className="read-more-button"
+                            variant="primary"
+                            //  onClick={() => handleSelectedCountry(key)}
+                          >
+                            READ MORE
+                          </motion.button>
                         </LinkContainer>
                       </Card.Body>
                     </Card>
