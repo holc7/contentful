@@ -1,0 +1,26 @@
+@media (min-width: 2560px) {
+  .invisible-element {
+    padding-top: 273px;
+  }
+  .bg-body-tertiary {
+    padding-right: 160px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+  .bg-body-tertiary {
+    padding-left: 120px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .bg-body-tertiary {
+    padding-left: 120px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1440px) {
+  .bg-body-tertiary {
+    padding-right: 160px;
+  }
+}
