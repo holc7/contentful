@@ -2,6 +2,12 @@
   padding-top: 156px;
 }
 
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+}
+
 @media (min-width: 2560px) {
   .invisible-element-about {
     padding-top: 233px;

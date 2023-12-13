@@ -8,8 +8,8 @@ import "./About.css";
 const About = () => {
   return (
     <Row className="card-container-about d-flex justify-content-center wide-row">
-      <motion.div className="col-xl-4 col-lg-5 col-md-6 col-custom">
-        <Card className="card-wrapper" style={{ width: "10%" }}>
+      <motion.div className="col-xl-4 col-lg-5 col-md-6 col-custom ">
+        <Card className="card-wrapper about-wrapper " style={{ width: "10%" }}>
           <Card.Img
             className="profile-image"
             variant="top"
@@ -18,7 +18,15 @@ const About = () => {
           />
           <Card.Body>
             <div className="d-flex align-items-center justify-content-between">
-              <Card.Title style={{ fontWeight: "600" }}>Denis</Card.Title>
+              <Card.Title
+                style={{
+                  fontWeight: "600",
+                  margin: "auto",
+                  paddingBottom: "5px",
+                }}
+              >
+                Denis
+              </Card.Title>
             </div>
             <Card.Text className="text-wrapper">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
@@ -30,7 +38,7 @@ const About = () => {
       </motion.div>
 
       <motion.div className="col-xl-4 col-lg-5 col-md-6 col-custom">
-        <Card className="card-wrapper" style={{ width: "10%" }}>
+        <Card className="card-wrapper about-wrapper " style={{ width: "10%" }}>
           <Card.Img
             className="profile-image"
             variant="top"
@@ -39,7 +47,15 @@ const About = () => {
           />
           <Card.Body>
             <div className="d-flex align-items-center justify-content-between">
-              <Card.Title style={{ fontWeight: "600" }}>Naeem</Card.Title>
+              <Card.Title
+                style={{
+                  fontWeight: "600",
+                  margin: "auto",
+                  paddingBottom: "5px",
+                }}
+              >
+                Naeem
+              </Card.Title>
             </div>
             <Card.Text className="text-wrapper">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
@@ -51,7 +67,7 @@ const About = () => {
       </motion.div>
 
       <motion.div className="col-xl-4 col-lg-5 col-md-6 col-custom">
-        <Card className="card-wrapper" style={{ width: "10%" }}>
+        <Card className="card-wrapper about-wrapper " style={{ width: "10%" }}>
           <Card.Img
             className="profile-image"
             variant="top"
@@ -59,8 +75,16 @@ const About = () => {
             style={{ width: "250px", height: "250px" }}
           />
           <Card.Body>
-            <div className="d-flex align-items-center justify-content-between">
-              <Card.Title style={{ fontWeight: "600" }}>Valentijn</Card.Title>
+            <div className="d-flex align-items-center  justify-content-between">
+              <Card.Title
+                style={{
+                  fontWeight: "600",
+                  margin: "auto",
+                  paddingBottom: "5px",
+                }}
+              >
+                Valentijn
+              </Card.Title>
             </div>
             <Card.Text className="text-wrapper">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
