@@ -32,24 +32,6 @@ const Header = () => {
                 <LinkContainer to="/contact">
                   <Nav.Link>Contact</Nav.Link>
                 </LinkContainer>
-
-                <NavDropdown title="Categories" id="basic-nav-dropdown">
-                  <LinkContainer to="/">
-                    <NavDropdown.Item className="nav-drop-down">
-                      Countries
-                    </NavDropdown.Item>
-                  </LinkContainer>
-                  <LinkContainer to="/cities">
-                    <NavDropdown.Item>Cities</NavDropdown.Item>
-                  </LinkContainer>
-                  {/* <NavDropdown.Item href="#action/3.3">
-                    Villages
-                  </NavDropdown.Item> */}
-                  {/* <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Contact
-                  </NavDropdown.Item> */}
-                </NavDropdown>
               </Nav>
             </Navbar.Collapse>
             <Link as={Link} to="contact">
