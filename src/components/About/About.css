@@ -1,0 +1,33 @@
+.card-container-about {
+  padding-top: 156px;
+}
+
+@media (min-width: 2560px) {
+  .invisible-element-about {
+    padding-top: 233px;
+  }
+  .bg-body-tertiary {
+    padding-right: 160px;
+  }
+  .card-container-about {
+    padding-top: 280px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+  .bg-body-tertiary {
+    padding-left: 120px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .bg-body-tertiary {
+    padding-left: 120px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1440px) {
+  .bg-body-tertiary {
+    padding-right: 160px;
+  }
+}
