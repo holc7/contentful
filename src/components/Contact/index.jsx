@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="d-flex justify-content-center">
       <form className="d-flex flex-column justify-content-center align-items-center form-wrapper">
         <h2>CONTACT US</h2>
 
@@ -19,7 +19,7 @@ const Contact = () => {
         <textarea
           className="form-textarea"
           name="message"
-          cols="24"
+          cols="50"
           rows="10"
           placeholder="Your message..."
         ></textarea>
