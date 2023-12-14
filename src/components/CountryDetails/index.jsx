@@ -14,9 +14,9 @@ import { Marker } from "react-leaflet/Marker";
 import { Popup } from "react-leaflet/Popup";
 import CountUp from "react-countup";
 import CommentSection from "../CommentSection/CommentSection";
-import '../../components/CommentSection/CommentSection'
+import "../../components/CommentSection/CommentSection";
 import CountryQuiz from "../CountryQuiz/CountryQuiz";
-import '../../components/CountryQuiz/CountryQuiz'
+import "../../components/CountryQuiz/CountryQuiz";
 
 const CountryDetails = () => {
   const { entryid } = useParams();
@@ -178,9 +178,11 @@ const CountryDetails = () => {
         <h2 className="quiz-title">Country Quiz</h2>
         <p>Now its time to Test your knowledge about countries!</p>
       </div>
-            <CountryQuiz />
+      <CountryQuiz />
 
-<CommentSection countryName={countryData?.fields?.countrytitle || 'Unknown Country'} />
+      <CommentSection
+        countryName={countryData?.fields?.countrytitle || "Unknown Country"}
+      />
       <motion.button
         whileTap={{ scale: 0.9 }}
         className="read-more-button countrydetails-read-more-button"
