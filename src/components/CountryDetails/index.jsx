@@ -84,6 +84,15 @@ const CountryDetails = () => {
                   </h1>
                 </div>
               </Col>
+              <Row className="row-p-img-quote align-items-center">
+                <Col>
+                  <div className="countrydetails-body-quote">
+                    <h3>
+                      {documentToReactComponents(countryData.fields.body)}
+                    </h3>
+                  </div>
+                </Col>
+              </Row>
             </Row>
             <Row className="row-p-img align-items-center">
               <Col>
@@ -110,14 +119,6 @@ const CountryDetails = () => {
               <Col>
                 <h2>{countryData.fields.paragraphTitle}</h2>
                 <p>{countryData.fields.secondParagraph}</p>
-              </Col>
-            </Row>
-
-            <Row className="row-p-img-quote align-items-center">
-              <Col>
-                <div className="countrydetails-body-quote">
-                  <h3>{documentToReactComponents(countryData.fields.body)}</h3>
-                </div>
               </Col>
             </Row>
 
