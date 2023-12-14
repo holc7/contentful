@@ -28,17 +28,18 @@ body {
   text-align: center;
 }
 .nav-drop-down .nav-link:focus {
-  background-color: rgba(
-    252,
-    88,
-    255,
-    1
-  ) !important; /* Or any color you prefer */
+  background-color: rgba(252, 88, 255, 1) !important;
 }
 
 @media (min-width: 2560px) {
   .container {
     margin-left: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar-nav {
+    gap: 100px;
   }
 }
 
