@@ -46,7 +46,7 @@ const Cards = ({ selectedContinent }) => {
         setTravel(filteredItems);
         setTimeout(() => {
           setLoading(false);
-        }, 2000);
+        }, 1000);
       })
       .catch((err) => {
         console.log(err);

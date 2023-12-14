@@ -61,6 +61,10 @@ const CountryDetails = () => {
             <Row>
               <Col>
                 <div className="name-population d-flex align-items-center justify-content-between">
+                  <img
+                    src={countryData.fields.countryFlag?.fields.file.url}
+                    alt="Country Flag"
+                  />{" "}
                   <h1 className="countrydetails-headline-h1">
                     {countryData.fields.countrytitle}
                   </h1>
@@ -105,7 +109,7 @@ const CountryDetails = () => {
               </Col>
             </Row>
 
-            <Row className="row-p-img align-items-center">
+            <Row className="row-p-img-quote align-items-center">
               <Col>
                 <div className="countrydetails-body-quote">
                   <h3>{documentToReactComponents(countryData.fields.body)}</h3>
@@ -140,7 +144,7 @@ const CountryDetails = () => {
               </Col>
             </Row>
 
-            <Row className="row-p-img">
+            <Row className="row-p-img-map">
               <Col>
                 <MapContainer
                   center={[
@@ -150,7 +154,11 @@ const CountryDetails = () => {
                   zoom={5}
                   scrollWheelZoom={false}
                   className="countrydetails-map"
-                  style={{ height: "400px", width: "100%" }}
+                  style={{
+                    height: "400px",
+                    width: "100%",
+                    borderRadius: "20px",
+                  }}
                 >
                   <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

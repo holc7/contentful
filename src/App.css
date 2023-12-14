@@ -24,6 +24,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.card-container {
+  margin-bottom: 100px;
+}
+
 .profile-image {
   height: 250px;
   border-top-right-radius: 30px;

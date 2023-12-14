@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="footer-content">
               <img src={logo} alt="logo" width={80} />
               <Navbar.Brand id="footer-name" href="#home">
-                Group 1 Contentful Project
+                Group 1 Contentful Project - Subscribe for $20
               </Navbar.Brand>
             </div>
           </div>
