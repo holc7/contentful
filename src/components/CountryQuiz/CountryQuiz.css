@@ -67,12 +67,3 @@ button:hover {
   width: 200px;
   height: 65px;
 }
-
-.prev-next-button {
-  display: flex;
-  flex-direction: row;
-}
-.answer-button {
-  display: flex;
-  flex-direction: row;
-}

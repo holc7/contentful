@@ -151,7 +151,7 @@ const CountryQuiz = () => {
       {currentQuestionIndex < shuffledQuestions.length ? (
         <>
           <h2>{shuffledQuestions[currentQuestionIndex].question}</h2>
-          <div className="answer-button">
+          <div className="answer-button d-flex flex-sm-row flex-column">
             {shuffledQuestions[currentQuestionIndex].options.map((option) => (
               <button
                 className="quiz-button"
@@ -163,7 +163,7 @@ const CountryQuiz = () => {
               </button>
             ))}
           </div>
-          <div className="prev-next-button">
+          <div className="prev-next-button d-flex flex-sm-row flex-column">
             <button
               className="quiz-button"
               onClick={handlePreviousQuestion}
