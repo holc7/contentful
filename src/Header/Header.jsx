@@ -11,18 +11,20 @@ const Header = () => {
   return (
     <div>
       <header>
-        <Navbar expand="lg" className="bg-body-tertiary">
-          <Container className="container ">
-            <img src={logo} alt="logo" width={80} />
-            <LinkContainer to="/">
-              <Navbar.Brand href="#home">Contentful</Navbar.Brand>
-            </LinkContainer>
+        <Navbar expand="lg" className="bg-body-tertiary custom-navbar">
+          <Container className="container-fluid">
+            <Link as={Link} to="/">
+              <img className="contact-logo" src={logo} alt="logo" width={80} />
+            </Link>
+            <Navbar.Brand href="#home">Contentful</Navbar.Brand>
+
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
             <Navbar.Collapse
               className="justify-content-center"
               id="basic-navbar-nav"
             >
-              <Nav className="">
+              <Nav className="align-items-center">
                 <LinkContainer to="/">
                   <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
@@ -34,14 +36,12 @@ const Header = () => {
                 </LinkContainer>
               </Nav>
             </Navbar.Collapse>
-            <Link as={Link} to="contact">
-              <img
-                className="contact-logo"
-                src={contact5}
-                alt="logo"
-                width={50}
-              />
-            </Link>
+
+            <div className="navbar-contact">
+              <Link as={Link} to="contact">
+                <img src={contact5} alt="contact" width={50} />
+              </Link>
+            </div>
           </Container>
         </Navbar>
       </header>
