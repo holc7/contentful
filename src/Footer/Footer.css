@@ -17,6 +17,11 @@
   align-items: center;
 }
 
+.bg-body-tertiary-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 @media (min-width: 320px) and (max-width: 767px) {
   #footer-name {
     margin-right: 1.6rem;

@@ -12,6 +12,7 @@ import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
 import { Marker } from "react-leaflet/Marker";
 import { Popup } from "react-leaflet/Popup";
+import CountUp from "react-countup";
 
 const CountryDetails = () => {
   const { entryid } = useParams();
@@ -55,36 +56,45 @@ const CountryDetails = () => {
         <Container>
           <div className="countrydetails">
             <Row>
-              <Col>
-                <Image
-                  src={countryData.fields.image?.fields.file.url}
-                  style={{ width: "100%" }}
-                />
-              </Col>
+              <Col></Col>
             </Row>
             <Row>
               <Col>
-                <h1 className="countrydetails-headline-h1">
-                  {countryData.fields.countrytitle}
-                </h1>
+                <div className="name-population d-flex align-items-center justify-content-between">
+                  <h1 className="countrydetails-headline-h1">
+                    {countryData.fields.countrytitle}
+                  </h1>
+                  <h1>
+                    Population - {""}
+                    <CountUp
+                      start={0}
+                      end={countryData.fields.population}
+                      duration={2.75}
+                      separator=","
+                    />
+                    (2021)
+                  </h1>
+                </div>
               </Col>
             </Row>
-            <Row className="row-p-img">
+            <Row className="row-p-img align-items-center">
               <Col>
                 <h2>{countryData.fields.paragraphTitle}</h2>
                 <p>{countryData.fields.firstParagraph}</p>
               </Col>
               <Col>
                 <Image
+                  className="country-images"
                   src={countryData.fields.morePictures[0].fields.file.url}
                   style={{ width: "100%" }}
                 />
               </Col>
             </Row>
 
-            <Row className="row-p-img">
+            <Row className="row-p-img align-items-center">
               <Col>
                 <Image
+                  className="country-images"
                   src={countryData.fields.morePictures[1].fields.file.url}
                   style={{ width: "100%" }}
                 />
@@ -95,7 +105,7 @@ const CountryDetails = () => {
               </Col>
             </Row>
 
-            <Row className="row-p-img">
+            <Row className="row-p-img align-items-center">
               <Col>
                 <div className="countrydetails-body-quote">
                   <h3>{documentToReactComponents(countryData.fields.body)}</h3>
@@ -103,21 +113,23 @@ const CountryDetails = () => {
               </Col>
             </Row>
 
-            <Row className="row-p-img">
+            <Row className="row-p-img align-items-center">
               <Col>
                 <h2>{countryData.fields.paragraphTitle}</h2>
                 <p>{countryData.fields.thirdParagraph}</p>
               </Col>
               <Col>
                 <Image
+                  className="country-images"
                   src={countryData.fields.morePictures[2].fields.file.url}
                   style={{ width: "100%" }}
                 />
               </Col>
             </Row>
-            <Row className="row-p-img">
+            <Row className="row-p-img align-items-center">
               <Col>
                 <Image
+                  className="country-images"
                   src={countryData.fields.morePictures[3].fields.file.url}
                   style={{ width: "100%" }}
                 />
@@ -127,12 +139,14 @@ const CountryDetails = () => {
                 <p>{countryData.fields.fourthParagraph}</p>
               </Col>
             </Row>
-             
-            
+
             <Row className="row-p-img">
               <Col>
                 <MapContainer
-                  center={[countryData.fields.location.lat, countryData.fields.location.lon]}
+                  center={[
+                    countryData.fields.location.lat,
+                    countryData.fields.location.lon,
+                  ]}
                   zoom={5}
                   scrollWheelZoom={false}
                   className="countrydetails-map"
